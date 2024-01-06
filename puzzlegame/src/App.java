@@ -1,4 +1,4 @@
-import com.itheima.ui.LoginJFrame;
+import com.utils.ui.LoginJFrame;
 
 public class App {
     public static void main(String[] args) {
