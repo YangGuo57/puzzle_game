@@ -30,18 +30,18 @@ public class RegisterJFrame extends JFrame implements MouseListener {
     @Override
     public void mousePressed(MouseEvent e) {
         if (e.getSource() == submit) {
-            submit.setIcon(new ImageIcon("puzzlegame\\image\\register\\注册按下.png"));
+            submit.setIcon(new ImageIcon("image/register/注册按下.png"));
         } else if (e.getSource() == reset) {
-            reset.setIcon(new ImageIcon("puzzlegame\\image\\register\\重置按下.png"));
+            reset.setIcon(new ImageIcon("image/register/重置按下.png"));
         }
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
         if (e.getSource() == submit) {
-            submit.setIcon(new ImageIcon("puzzlegame\\image\\register\\注册按钮.png"));
+            submit.setIcon(new ImageIcon("image/register/注册按钮.png"));
         } else if (e.getSource() == reset) {
-            reset.setIcon(new ImageIcon("puzzlegame\\image\\register\\重置按钮.png"));
+            reset.setIcon(new ImageIcon("image/register/重置按钮.png"));
         }
     }
 
@@ -57,42 +57,42 @@ public class RegisterJFrame extends JFrame implements MouseListener {
 
     private void initView() {
         //添加注册用户名的文本
-        JLabel usernameText = new JLabel(new ImageIcon("puzzlegame\\image\\register\\注册用户名.png"));
+        JLabel usernameText = new JLabel(new ImageIcon("image/register/注册用户名.png"));
         usernameText.setBounds(85, 135, 80, 20);
 
         //添加注册用户名的输入框
         username.setBounds(195, 134, 200, 30);
 
         //添加注册密码的文本
-        JLabel passwordText = new JLabel(new ImageIcon("puzzlegame\\image\\register\\注册密码.png"));
+        JLabel passwordText = new JLabel(new ImageIcon("image/register/注册密码.png"));
         passwordText.setBounds(97, 193, 70, 20);
 
         //添加密码输入框
         password.setBounds(195, 195, 200, 30);
 
         //添加再次输入密码的文本
-        JLabel rePasswordText = new JLabel(new ImageIcon("puzzlegame\\image\\register\\再次输入密码.png"));
+        JLabel rePasswordText = new JLabel(new ImageIcon("image/register/再次输入密码.png"));
         rePasswordText.setBounds(64, 255, 95, 20);
 
         //添加再次输入密码的输入框
         rePassword.setBounds(195, 255, 200, 30);
 
         //注册的按钮
-        submit.setIcon(new ImageIcon("puzzlegame\\image\\register\\注册按钮.png"));
+        submit.setIcon(new ImageIcon("image/register/注册按钮.png"));
         submit.setBounds(123, 310, 128, 47);
         submit.setBorderPainted(false);
         submit.setContentAreaFilled(false);
         submit.addMouseListener(this);
 
         //重置的按钮
-        reset.setIcon(new ImageIcon("puzzlegame\\image\\register\\重置按钮.png"));
+        reset.setIcon(new ImageIcon("image/register/重置按钮.png"));
         reset.setBounds(256, 310, 128, 47);
         reset.setBorderPainted(false);
         reset.setContentAreaFilled(false);
         reset.addMouseListener(this);
 
         //背景图片
-        JLabel background = new JLabel(new ImageIcon("puzzlegame\\image\\register\\background.png"));
+        JLabel background = new JLabel(new ImageIcon("image/background.png"));
         background.setBounds(0, 0, 470, 390);
 
         this.getContentPane().add(usernameText);
@@ -124,15 +124,16 @@ public class RegisterJFrame extends JFrame implements MouseListener {
 
     //只创建一个弹框对象
     JDialog jDialog = new JDialog();
+
     //因为展示弹框的代码，会被运行多次
     //所以，我们把展示弹框的代码，抽取到一个方法中。以后用到的时候，就不需要写了
     //直接调用就可以了。
-    public void showDialog(String content){
-        if(!jDialog.isVisible()){
+    public void showDialog(String content) {
+        if (!jDialog.isVisible()) {
             //把弹框中原来的文字给清空掉。
             jDialog.getContentPane().removeAll();
             JLabel jLabel = new JLabel(content);
-            jLabel.setBounds(0,0,200,150);
+            jLabel.setBounds(0, 0, 200, 150);
             jDialog.add(jLabel);
             //给弹框设置大小
             jDialog.setSize(200, 150);
