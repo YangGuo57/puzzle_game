@@ -90,36 +90,36 @@ public class LoginJFrame extends JFrame implements MouseListener {
     @Override
     public void mouseClicked(MouseEvent e) {
         if (e.getSource() == login) {
-            System.out.println("点击了登录按钮");
+            System.out.println("click login");
             String usernameInput = username.getText();
             String passwordInput = password.getText();
             String codeInput = code.getText();
 
             User userInfo = new User(usernameInput, passwordInput);
-            System.out.println("用户输入的用户名为" + usernameInput);
-            System.out.println("用户输入的密码为" + passwordInput);
+            System.out.println("Username:" + usernameInput);
+            System.out.println("Pwd:" + passwordInput);
 
             if (codeInput.isEmpty()) {
-                showJDialog("验证码不能为空");
+                showJDialog("Code cannt be empty");
             } else if (usernameInput.isEmpty() || passwordInput.isEmpty()) {
-                System.out.println("用户名或者密码为空");
-                showJDialog("用户名或者密码为空");
+                System.out.println("Username or Pwd is empty");
+                showJDialog("Username or Pwd is empty");
 
 
             } else if (!codeInput.equalsIgnoreCase(rightCode.getText())) {
-                showJDialog("验证码输入错误");
+                showJDialog("Code is wrong");
             } else if (contains(userInfo)) {
-                System.out.println("用户名和密码正确可以开始玩游戏了");
+                System.out.println("Start game!");
                 this.setVisible(false);
                 new GameJFrame();
             } else {
-                System.out.println("用户名或密码错误");
-                showJDialog("用户名或密码错误");
+                System.out.println("Username or Pwd is wrong");
+                showJDialog("Username or Pwd is wrong");
             }
         } else if (e.getSource() == register) {
-            System.out.println("点击了注册按钮");
+            System.out.println("click register");
         } else if (e.getSource() == rightCode) {
-            System.out.println("更换验证码");
+            System.out.println("change code");
             String code = CodeUtil.getCode();
             rightCode.setText(code);
         }
