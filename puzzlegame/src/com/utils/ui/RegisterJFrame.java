@@ -95,7 +95,7 @@ public class RegisterJFrame extends JFrame implements MouseListener {
 
     private void initFrame() {
         setSize(488, 430);
-        setTitle("拼图游戏 V1.0注册");
+        setTitle("Sliding Puzzle V1.0Register");
         setLayout(null);
         setDefaultCloseOperation(3);
         setLocationRelativeTo(null);

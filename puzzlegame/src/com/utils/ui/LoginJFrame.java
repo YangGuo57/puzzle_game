@@ -80,7 +80,7 @@ public class LoginJFrame extends JFrame implements MouseListener {
 
     public void initJFrame() {
         this.setSize(488, 430);
-        this.setTitle("拼图游戏 V1.0登录");
+        this.setTitle("Sliding Puzzle V1.0Login");
         this.setDefaultCloseOperation(3);
         this.setLocationRelativeTo(null);
         this.setAlwaysOnTop(true);
