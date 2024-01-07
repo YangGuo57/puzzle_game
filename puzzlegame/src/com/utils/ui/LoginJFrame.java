@@ -99,9 +99,9 @@ public class LoginJFrame extends JFrame implements MouseListener {
             System.out.println("用户输入的用户名为" + usernameInput);
             System.out.println("用户输入的密码为" + passwordInput);
 
-            if (codeInput.length() == 0) {
+            if (codeInput.isEmpty()) {
                 showJDialog("验证码不能为空");
-            } else if (usernameInput.length() == 0 || passwordInput.length() == 0) {
+            } else if (usernameInput.isEmpty() || passwordInput.isEmpty()) {
                 System.out.println("用户名或者密码为空");
                 showJDialog("用户名或者密码为空");
 
