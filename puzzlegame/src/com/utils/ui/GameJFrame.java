@@ -24,13 +24,13 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
             {13, 14, 15, 0}
     };
     int step = 0;
-    JMenuItem girl = new JMenuItem("美女");
-    JMenuItem animal = new JMenuItem("动物");
-    JMenuItem sport = new JMenuItem("运动");
-    JMenuItem replayItem = new JMenuItem("重新游戏");
-    JMenuItem reLoginItem = new JMenuItem("重新登录");
-    JMenuItem closeItem = new JMenuItem("关闭游戏");
-    JMenuItem accountItem = new JMenuItem("公众号");
+    JMenuItem girl = new JMenuItem("Girls");
+    JMenuItem animal = new JMenuItem("Animals");
+    JMenuItem sport = new JMenuItem("Sports");
+    JMenuItem replayItem = new JMenuItem("Restart the game");
+    JMenuItem reLoginItem = new JMenuItem("Login again");
+    JMenuItem closeItem = new JMenuItem("Exit the game");
+    JMenuItem accountItem = new JMenuItem("Yang");
     Random r = new Random();
 
     public GameJFrame() {
@@ -67,7 +67,7 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
             this.getContentPane().add(winJLabel);
         }
 
-        JLabel stepCount = new JLabel("步数：" + step);
+        JLabel stepCount = new JLabel("Step：" + step);
         stepCount.setBounds(50, 30, 100, 20);
         this.getContentPane().add(stepCount);
 
@@ -88,9 +88,9 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
 
     private void initJMenuBar() {
         JMenuBar jMenuBar = new JMenuBar();
-        JMenu functionJMenu = new JMenu("功能");
-        JMenu aboutJMenu = new JMenu("关于我们");
-        JMenu changeImage = new JMenu("更换图片");
+        JMenu functionJMenu = new JMenu("Main Menu");
+        JMenu aboutJMenu = new JMenu("About Me");
+        JMenu changeImage = new JMenu("Switch img");
 
         changeImage.add(girl);
         changeImage.add(animal);
@@ -154,7 +154,7 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
         int code = e.getKeyCode();
         System.out.println(code);
         if (code == 37) {
-            System.out.println("向左移动");
+            System.out.println("move left");
             if (y == 3) {
                 return;
             }
@@ -164,7 +164,7 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
             step++;
             initImage();
         } else if (code == 38) {
-            System.out.println("向上移动");
+            System.out.println("move up");
             if (x == 3) {
                 return;
             }
@@ -174,7 +174,7 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
             step++;
             initImage();
         } else if (code == 39) {
-            System.out.println("向右移动");
+            System.out.println("move right");
             if (y == 0) {
                 return;
             }
@@ -184,7 +184,7 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
             step++;
             initImage();
         } else if (code == 40) {
-            System.out.println("向下移动");
+            System.out.println("move down");
             if (x == 0) {
                 return;
             }
@@ -221,19 +221,19 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
     public void actionPerformed(ActionEvent e) {
         Object obj = e.getSource();
         if (obj == replayItem) {
-            System.out.println("重新游戏");
+            System.out.println("Restart");
             step = 0;
             initData();
             initImage();
         } else if (obj == reLoginItem) {
-            System.out.println("重新登录");
+            System.out.println("Login again");
             this.setVisible(false);
             new LoginJFrame();
         } else if (obj == closeItem) {
-            System.out.println("关闭游戏");
+            System.out.println("Exit game");
             System.exit(0);
         } else if (obj == accountItem) {
-            System.out.println("公众号");
+            System.out.println("About us");
             JDialog jDialog = new JDialog();
             JLabel jLabel = new JLabel(new ImageIcon("image/about.png"));
             jLabel.setBounds(0, 0, 258, 258);
