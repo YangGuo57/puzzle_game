@@ -1,4 +1,16 @@
-# puzzle_game
-This game project was 80% complete on August 2023. More feature need to be added:
-- save and load
-- 
+# Project Title
+
+Sliding Puzzle
+
+## Project Description
+
+I developed a Java-based puzzle game featuring an intuitive JFrame interface, personalized user authentication, and dynamic puzzle shuffling with move tracking, focusing on enhancing user engagement and cognitive challenge.
+
+## Technologies and Resources Used
+
+- Java
+- JFrame
+
+## Features for Future
+
+- Save and Load
