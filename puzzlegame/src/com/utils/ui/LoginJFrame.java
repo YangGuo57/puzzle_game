@@ -61,14 +61,14 @@ public class LoginJFrame extends JFrame implements MouseListener {
         this.getContentPane().add(rightCode);
 
         login.setBounds(123, 310, 128, 47);
-        login.setIcon(new ImageIcon("image/login/登录按钮.png"));
+        login.setIcon(new ImageIcon("image/login/login.png"));
         login.setBorderPainted(false);
         login.setContentAreaFilled(false);
         login.addMouseListener(this);
         this.getContentPane().add(login);
 
         register.setBounds(256, 310, 128, 47);
-        register.setIcon(new ImageIcon("image/login/注册按钮.png"));
+        register.setIcon(new ImageIcon("image/login/regis.png"));
         register.setBorderPainted(false);
         register.setContentAreaFilled(false);
         register.addMouseListener(this);
@@ -142,18 +142,18 @@ public class LoginJFrame extends JFrame implements MouseListener {
     @Override
     public void mousePressed(MouseEvent e) {
         if (e.getSource() == login) {
-            login.setIcon(new ImageIcon("image/login/登录按下.png"));
+            login.setIcon(new ImageIcon("image/login/login.png"));
         } else if (e.getSource() == register) {
-            register.setIcon(new ImageIcon("image/login/注册按下.png"));
+            register.setIcon(new ImageIcon("image/login/regis.png"));
         }
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
         if (e.getSource() == login) {
-            login.setIcon(new ImageIcon("image/login/登录按钮.png"));
+            login.setIcon(new ImageIcon("image/login/login.png"));
         } else if (e.getSource() == register) {
-            register.setIcon(new ImageIcon("image/login/注册按钮.png"));
+            register.setIcon(new ImageIcon("image/login/regis.png"));
         }
     }
 
