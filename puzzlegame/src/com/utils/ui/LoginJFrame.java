@@ -13,7 +13,7 @@ public class LoginJFrame extends JFrame implements MouseListener {
     static ArrayList<User> allUsers = new ArrayList<>();
 
     static {
-        allUsers.add(new User("zhangsan", "123"));
+        allUsers.add(new User("user", "123"));
         allUsers.add(new User("lisi", "1234"));
     }
 
